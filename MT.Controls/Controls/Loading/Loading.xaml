@@ -176,11 +176,6 @@
                                                    Foreground="{TemplateBinding Foreground}"
                                                    Text="{TemplateBinding LoadingTextForBind}"
                                                    Visibility="{TemplateBinding TextVisible}" />
-                                        <Button Width="100"
-                                                Height="40"
-                                                Style="{DynamicResource BorderButton}">
-                                            Test
-                                        </Button>
                                     </Grid>
                                 </Grid>
                             </Border>
