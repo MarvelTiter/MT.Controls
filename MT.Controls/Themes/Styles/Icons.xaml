@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="Icon_Connect">&#xe61d;</sys:String>
+    <sys:String x:Key="Icon_Network">&#xe6b5;</sys:String>
+    <sys:String x:Key="Icon_Remote">&#xe6b7;</sys:String>
+    <sys:String x:Key="Icon_Live">&#xe6a0;</sys:String>
+    <sys:String x:Key="Icon_Analysis">&#xe628;</sys:String>
+    <sys:String x:Key="Icon_Start">&#xea40;</sys:String>
+    <sys:String x:Key="Icon_Edit">&#xe600;</sys:String>
+    <sys:String x:Key="Icon_Delete">&#xe7e7;</sys:String>
+    <sys:String x:Key="Icon_Save">&#xe601;</sys:String>
+    <sys:String x:Key="Icon_Exit">&#xe602;</sys:String>
+    <sys:String x:Key="Icon_Ethernet">&#xe67f;</sys:String>
+    <sys:String x:Key="Icon_Config">&#xe637;</sys:String>
+    <sys:String x:Key="Icon_Auto">&#xe625;</sys:String>
+    <sys:String x:Key="Icon_Load">&#xe626;</sys:String>
+    <sys:String x:Key="Icon_Update">&#xe619;</sys:String>
+    <sys:String x:Key="Icon_State">&#xe6bc;</sys:String>
+    <sys:String x:Key="Icon_Search">&#xe60a;</sys:String>
+    <sys:String x:Key="Icon_Info">&#xe675;</sys:String>
+    <sys:String x:Key="Icon_Monitor">&#xe629;</sys:String>
+    <sys:String x:Key="Icon_RecordDisk">&#xe930;</sys:String>
+    <sys:String x:Key="Icon_SuccessBold">&#xe73c;</sys:String>
+    <sys:String x:Key="Icon_Success">&#xea0b;</sys:String>
+    <sys:String x:Key="Icon_ErrorBold">&#xe658;</sys:String>
+    <sys:String x:Key="Icon_Error">&#xe640;</sys:String>
+</ResourceDictionary>

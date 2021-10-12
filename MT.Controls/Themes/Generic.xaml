@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <FontFamily x:Key="CustomFamily">/MT.Controls;component/Resources/#iconfont</FontFamily>
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/MT.Controls;component/Themes/Generic.Core.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

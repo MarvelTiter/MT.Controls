@@ -1,0 +1,66 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mt="clr-namespace:MT.Controls">
+    <Style TargetType="mt:ContentDialog">
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="20" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="mt:ContentDialog">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="OpenStoryboard">
+                            <DoubleAnimation BeginTime="0:0:0"
+                                             Storyboard.TargetName="scale"
+                                             Storyboard.TargetProperty="ScaleX"
+                                             From="0.3"
+                                             To="1"
+                                             Duration="0:0:0.35">
+                                <DoubleAnimation.EasingFunction>
+                                    <CircleEase EasingMode="EaseOut" />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                            <DoubleAnimation BeginTime="0:0:0"
+                                             Storyboard.TargetName="scale"
+                                             Storyboard.TargetProperty="ScaleY"
+                                             From="0.3"
+                                             To="1"
+                                             Duration="0:0:0.35">
+                                <DoubleAnimation.EasingFunction>
+                                    <CircleEase EasingMode="EaseOut" />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                            <DoubleAnimation BeginTime="0:0:0"
+                                             Storyboard.TargetName="presenter"
+                                             Storyboard.TargetProperty="Opacity"
+                                             From="0"
+                                             To="1"
+                                             Duration="0:0:0.35">
+                                <DoubleAnimation.EasingFunction>
+                                    <CircleEase EasingMode="EaseOut" />
+                                </DoubleAnimation.EasingFunction>
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+                    <Border Background="#40000000">
+                        <ContentPresenter Name="presenter"
+                                          Margin="{TemplateBinding Padding}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          RenderTransformOrigin="0.5 0.5">
+                            <ContentPresenter.LayoutTransform>
+                                <ScaleTransform x:Name="scale" />
+                            </ContentPresenter.LayoutTransform>
+                        </ContentPresenter>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <EventTrigger RoutedEvent="Loaded">
+                            <BeginStoryboard Storyboard="{StaticResource OpenStoryboard}" />
+                        </EventTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

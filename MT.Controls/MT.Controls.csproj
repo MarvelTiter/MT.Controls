@@ -1,0 +1,72 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net45;net5.0-windows</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Description>Some WPF Controls : ContentDialog , Loading , RemindBox , ConfirmBox , WaitingBox , Dashboard</Description>
+    <Authors>MarvelTiter</Authors>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\iconfont.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\iconfont.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommonServiceLocator" Version="2.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Controls\MsgBox\TextView.xaml.cs">
+      <DependentUpon>TextView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Controls\WaitingBox\WaitingView.xaml.cs">
+      <DependentUpon>WaitingView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Chart\DashBoard\DashBoard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Chart\SerialChart\SerialChart.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\Dialog\ContentDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\Dialog\DialogBorder.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\Flyout\ContentFlyout.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\Loading\Loading.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\MsgBox\TextView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\WaitingBox\WaitingView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Generic.Core.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Styles\Buttons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Styles\Icons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

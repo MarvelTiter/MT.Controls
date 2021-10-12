@@ -1,0 +1,111 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:chart="clr-namespace:MT.Controls.Chart">
+    <Style TargetType="{x:Type chart:DashBoard}">
+        <Setter Property="AngleRange" Value="120,420" />
+        <Setter Property="ValueRange" Value="0,180" />
+        <Setter Property="Angle" Value="120" />
+        <Setter Property="Title" Value="Speed" />
+        <Setter Property="Unit" Value="km/h" />
+        <Setter Property="Foreground" Value="#FFFFFFFF" />
+        <Setter Property="PieSectionDefinitions">
+            <Setter.Value>
+                <chart:PieSectionCollection>
+                    <chart:PieSectionDefinition AngleRange="120,420"
+                                                Fill="#FFFFFFFF"
+                                                RadiusRange="0.7,0.75" />
+                    <chart:PieSectionDefinition AngleRange="120,210"
+                                                Fill="#FF006400"
+                                                RadiusRange="0.65,0.68" />
+                    <chart:PieSectionDefinition AngleRange="240,320"
+                                                Fill="#FFD2691E"
+                                                RadiusRange="0.65,0.68" />
+                    <chart:PieSectionDefinition AngleRange="360,420"
+                                                Fill="#FFFF006E"
+                                                RadiusRange="0.65,0.68" />
+                </chart:PieSectionCollection>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="PieTickDefinitions">
+            <Setter.Value>
+                <chart:PieTickCollection>
+                    <chart:PieTickDefinition AngleRange="120,420"
+                                             RadiusRange="0.65,0.75"
+                                             Step="10"
+                                             Thickness="2" />
+                    <chart:PieTickDefinition AngleRange="120,420"
+                                             RadiusRange="0.6,0.75"
+                                             Step="50"
+                                             Thickness="6" />
+                </chart:PieTickCollection>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="LabelConfig">
+            <Setter.Value>
+                <chart:LabelDefinition CenterOffset="0.5"
+                                       FontSize="24"
+                                       Step="30" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="NeedleConfig">
+            <Setter.Value>
+                <chart:NeedleDefinition Width="0.03"
+                                        CenterOffset="0.15"
+                                        Fill="LimeGreen"
+                                        PointLength="0.1"
+                                        TailLength="0.15" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type chart:DashBoard}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Grid>
+                            <Grid Name="PART_PieSection"
+                                  Width="{TemplateBinding Width}"
+                                  Height="{TemplateBinding Height}"
+                                  Background="#00FFFFFF" />
+                            <Grid Name="PART_TickSection"
+                                  Width="{TemplateBinding Width}"
+                                  Height="{TemplateBinding Height}"
+                                  Background="#00FFFFFF" />
+                            <Grid Name="PART_Needle"
+                                  Width="{TemplateBinding Width}"
+                                  Height="{TemplateBinding Height}"
+                                  Background="#00FFFFFF">
+                                <chart:Needle Width="{Binding Path=ActualWidth, RelativeSource={RelativeSource AncestorType=Grid}}"
+                                              Height="{Binding Path=ActualHeight, RelativeSource={RelativeSource AncestorType=Grid}}"
+                                              CenterOffset="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=NeedleConfig.CenterOffset}"
+                                              Fill="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=NeedleConfig.Fill}"
+                                              NeedleLength="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=NeedleConfig.PointLength}"
+                                              NeedleTailLength="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=NeedleConfig.TailLength}"
+                                              NeedleWidth="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=NeedleConfig.Width}"
+                                              RenderTransformOrigin="0.5,0.5">
+                                    <chart:Needle.RenderTransform>
+                                        <RotateTransform Angle="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Angle}" />
+                                    </chart:Needle.RenderTransform>
+                                </chart:Needle>
+                            </Grid>
+                            <Canvas Name="PART_Lable"
+                                    Width="{TemplateBinding Width}"
+                                    Height="{TemplateBinding Height}"
+                                    Background="#00FFFFFF" />
+                            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <TextBlock FontSize="28"
+                                           Text="{Binding Path=Title, StringFormat={}{0:F2}, RelativeSource={RelativeSource Mode=TemplatedParent}}"
+                                           TextAlignment="Center" />
+                                <TextBlock FontSize="28" TextAlignment="Center">
+                                    <Run Text="{Binding Path=Value, StringFormat={}{0:F2}, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                                    <Run Text="{Binding Path=Unit, RelativeSource={RelativeSource Mode=TemplatedParent}}" />
+                                </TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

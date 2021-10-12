@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UIPreview", "UIPreview\UIPreview.csproj", "{5C3923ED-DDBA-43F5-B194-8010FBB0D180}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MT.Controls", "MT.Controls\MT.Controls.csproj", "{31AECB8A-B774-4B0F-9EDF-D6CAB0B98335}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C3923ED-DDBA-43F5-B194-8010FBB0D180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C3923ED-DDBA-43F5-B194-8010FBB0D180}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C3923ED-DDBA-43F5-B194-8010FBB0D180}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C3923ED-DDBA-43F5-B194-8010FBB0D180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31AECB8A-B774-4B0F-9EDF-D6CAB0B98335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31AECB8A-B774-4B0F-9EDF-D6CAB0B98335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31AECB8A-B774-4B0F-9EDF-D6CAB0B98335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31AECB8A-B774-4B0F-9EDF-D6CAB0B98335}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0BB0F211-C26E-4873-8ED5-D3577F687D04}
+	EndGlobalSection
+EndGlobal

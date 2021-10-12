@@ -1,0 +1,22 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:attach="clr-namespace:MT.Controls.Attachs"
+                    xmlns:cc="clr-namespace:MT.Controls.Converters"
+                    xmlns:chart="clr-namespace:MT.Controls.Chart"
+                    xmlns:mt="clr-namespace:MT.Controls"
+                    xmlns:or="clr-namespace:MT.Controls.Override">
+
+    <cc:BooleanVisibilityConverter x:Key="BVC" />
+    <cc:RevertConverter x:Key="RRC" />
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Styles/Icons.xaml" />
+        <ResourceDictionary Source="Styles/Buttons.xaml" />
+        <ResourceDictionary Source="../Controls/Dialog/ContentDialog.xaml" />
+        <ResourceDictionary Source="../Controls/Dialog/DialogBorder.xaml" />
+        <ResourceDictionary Source="../Controls/Loading/Loading.xaml" />
+        <ResourceDictionary Source="../Chart/DashBoard/DashBoard.xaml" />
+        <ResourceDictionary Source="../Controls/Flyout/ContentFlyout.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

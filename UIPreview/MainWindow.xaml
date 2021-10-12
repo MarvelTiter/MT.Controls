@@ -1,0 +1,92 @@
+﻿<Window x:Class="UIPreview.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:attach="clr-namespace:MT.Controls.Attachs;assembly=MT.Controls"
+        xmlns:chart="clr-namespace:MT.Controls.Chart;assembly=MT.Controls"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:UIPreview"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mt="clr-namespace:MT.Controls;assembly=MT.Controls"
+        Title="MainWindow"
+        Width="800"
+        Height="450"
+        mt:Loading.IsLoading="{Binding IsLoading}"
+        DataContext="{Binding RelativeSource={RelativeSource Mode=Self}}"
+        mc:Ignorable="d">
+    <StackPanel>
+        <Button Width="100"
+                Height="40"
+                attach:ButtonAttach.Radius="5"
+                Click="Button_Click"
+                Style="{StaticResource BorderButton}">
+            Remind
+        </Button>
+        <Button Width="100"
+                Height="40"
+                attach:ButtonAttach.Radius="5"
+                Click="Button_Click_1"
+                FontFamily="{StaticResource CustomFamily}"
+                Style="{StaticResource BorderButton}">
+            Waiting
+        </Button>
+        <Button Width="100"
+                Height="40"
+                attach:ButtonAttach.Radius="5"
+                Click="Button_Click_2"
+                FontFamily="{StaticResource CustomFamily}"
+                Style="{StaticResource BorderButton}">
+            Dialog
+        </Button>
+        <Button Width="100"
+                Height="40"
+                attach:ButtonAttach.Radius="5"
+                Click="Button_Click_3"
+                FontFamily="{StaticResource CustomFamily}"
+                Style="{StaticResource BorderButton}">
+            Loading
+        </Button>
+        <chart:DashBoard Title="水温"
+                         Height="400"
+                         Angle="210"
+                         AngleRange="210,330"
+                         Foreground="Gray"
+                         Unit="℃"
+                         ValueRange="0,100"
+                         Value="70.5">
+            <chart:DashBoard.PieSectionDefinitions>
+                <chart:PieSectionCollection>
+                    <chart:PieSectionDefinition AngleRange="210,330"
+                                                Fill="#FF3e3e3e"
+                                                RadiusRange="0.87,0.9" />
+                    <chart:PieSectionDefinition AngleRange="210,300"
+                                                Fill="#FF006400"
+                                                RadiusRange="0.8,0.85" />
+                    <chart:PieSectionDefinition AngleRange="300,330"
+                                                Fill="#FFFF006E"
+                                                RadiusRange="0.8,0.85" />
+                </chart:PieSectionCollection>
+            </chart:DashBoard.PieSectionDefinitions>
+            <chart:DashBoard.PieTickDefinitions>
+                <chart:PieTickCollection>
+                    <chart:PieTickDefinition AngleRange="210,330"
+                                             RadiusRange="0.8,0.9"
+                                             Step="10"
+                                             Thickness="3" />
+                </chart:PieTickCollection>
+            </chart:DashBoard.PieTickDefinitions>
+            <chart:DashBoard.LabelConfig>
+                <chart:LabelDefinition CenterOffset="0.65"
+                                       FontSize="18"
+                                       Foreground="Gray"
+                                       Step="20" />
+            </chart:DashBoard.LabelConfig>
+            <chart:DashBoard.NeedleConfig>
+                <chart:NeedleDefinition Width="0.03"
+                                        CenterOffset="0.15"
+                                        Fill="LimeGreen"
+                                        PointLength="0.1"
+                                        TailLength="0.15" />
+            </chart:DashBoard.NeedleConfig>
+        </chart:DashBoard>
+    </StackPanel>
+</Window>
