@@ -39,7 +39,7 @@ namespace MT.Controls.Attachs
             {
                 return;
             }
-            if (d is Button btn)
+            if (d is Button btn && btn != null)
             {
                 btn.Loaded += Btn_Loaded;
             }
@@ -47,7 +47,8 @@ namespace MT.Controls.Attachs
 
         private static void Btn_Loaded(object sender, RoutedEventArgs e)
         {
-            ContentFlyout flyout = GetFlyout(sender as DependencyObject);
+            if (e.Source == null) return;
+            ContentFlyout flyout = GetFlyout(e.Source as DependencyObject);
             if (flyout != null && flyout.ApplyTemplate())
             {
                 var btn = sender as Button;

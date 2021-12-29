@@ -37,9 +37,9 @@
                                             Height="30"
                                             Margin="0,0,0,10"
                                             HorizontalAlignment="Right"
-                                            Style="{StaticResource BorderButton}">
-                                        <TextBlock FontFamily="{StaticResource CustomFamily}" FontSize="14">
-                                            <Run Text="{StaticResource Icon_Error}" />
+                                            Style="{DynamicResource BorderButton}">
+                                        <TextBlock FontFamily="{DynamicResource CustomFamily}" FontSize="14">
+                                            <Run Text="{DynamicResource Icon_Error}" />
                                             <!--<Run Text="Cancel" />-->
                                         </TextBlock>
                                     </Button>

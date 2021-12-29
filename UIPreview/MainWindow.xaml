@@ -45,6 +45,47 @@
                 Style="{StaticResource BorderButton}">
             Loading
         </Button>
+        <Button Width="100"
+                Height="40"
+                attach:ButtonAttach.Radius="5"
+                Background="#ff3e3e3e"
+                BorderThickness="0"
+                Content="Flyout"
+                Foreground="#ffefefef"
+                Style="{DynamicResource BorderButton}">
+            <attach:ButtonAttach.Flyout>
+                <mt:ContentFlyout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0"
+                                   Grid.Column="0"
+                                   VerticalAlignment="Center"
+                                   Foreground="#ffefefef"
+                                   Text="执行间隔(ms)" />
+                        <TextBlock Grid.Row="1"
+                                   Grid.Column="0"
+                                   VerticalAlignment="Center"
+                                   Foreground="#ffefefef"
+                                   Text="循环间隔(ms)" />
+                        <TextBox Grid.Row="0"
+                                 Grid.Column="1"
+                                 Height="25"
+                                 VerticalAlignment="Center" />
+                        <TextBox Grid.Row="1"
+                                 Grid.Column="1"
+                                 Height="25"
+                                 VerticalAlignment="Center" />
+                    </Grid>
+                </mt:ContentFlyout>
+            </attach:ButtonAttach.Flyout>
+        </Button>
         <chart:DashBoard Title="水温"
                          Height="400"
                          Angle="210"

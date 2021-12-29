@@ -8,6 +8,7 @@
     <Description>Some WPF Controls : ContentDialog , Loading , RemindBox , ConfirmBox , WaitingBox , Dashboard</Description>
     <Authors>MarvelTiter</Authors>
     <RepositoryUrl>https://github.com/MarvelTiter/MT.Controls</RepositoryUrl>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

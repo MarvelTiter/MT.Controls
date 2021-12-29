@@ -173,7 +173,7 @@ namespace MT.Controls
             }
         }
 
-        private static void Close()
+        public static void Close()
         {
             if (instance != null)
             {
